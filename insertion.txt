@@ -1,0 +1,32 @@
+[22, 27, 16, 2, 18, 6]
+
+İlk eleman (22) zaten sıralı kabul edilir.
+1.[22, 27, 16, 2, 18, 6]
+27 ele alınır: 27 > 22 olduğu için yerinde kalır.
+2.[22, 27, 16, 2, 18, 6]
+16 ele alınır: 16 < 27 → 27 sağa kayar, 16 < 22 → 22 de sağa kayar → 16 yerleştirilir.
+3.[16, 22, 27, 2, 18, 6]
+2 ele alınır: 2 < 27 → 27 sağa, 22 sağa, 16 sağa → 2 en başa yerleştirilir.
+4.[2, 16, 22, 27, 18, 6]
+18 ele alınır: 18 < 27 → 27 sağa, 18 < 22 → 22 sağa, ama 18 > 16 → 18 buraya yerleştirilir.
+5.[2, 16, 18, 22, 27, 6]
+6 ele alınır: 6 < 27, 22, 18, 16 → Hepsi sağa kayar → 6, 2'den büyük olduğu için 2'nin yanına yerleşir.
+6.[2, 6, 16, 18, 22, 27]
+
+Time Complexity Yorumu (18 sayısı için):
+Sıralı dizide [2, 6, 16, 18, 22, 27]
+→ 18 ortada yer alıyor.
+
+Cevap: Average case kapsamına girer.
+
+
+[7, 3, 5, 8, 2, 9, 4, 15, 6]
+
+En küçük eleman 2, başa (0. indeks) alınır:
+1.[2, 3, 5, 8, 7, 9, 4, 15, 6]
+Kalan dizi [3,5,8,7,9,4,15,6], en küçük 3, yerinde kalır:
+2.[2, 3, 5, 8, 7, 9, 4, 15, 6]
+Kalan dizi [5,8,7,9,4,15,6], en küçük 4 → 4 ve 5 yer değiştirir:
+3.[2, 3, 4, 8, 7, 9, 5, 15, 6]
+Kalan dizi [8,7,9,5,15,6], en küçük 5 → 5 ve 8 yer değiştirir:
+4.[2, 3, 4, 5, 7, 9, 8, 15, 6]
